@@ -15,20 +15,25 @@ public class TelaJogo {
     public static char pegarEntrada() {
         Scanner sc = new Scanner(System.in);
         char letra;
-        do{
-            System.out.println("Qual letra a palavra possui?");
-            System.out.println("Digite seu chute: ");
-            letra = sc.nextLine().charAt(0);
-            
-            if(letra >= 97 && letra <= 122) System.out.println("Entrada inválida!\n\n");
-        }while(letra >= 97 && letra <= 122);
         
-        System.out.println(">> Pegando Entrada do Jogo <<");
+        // Tratando a entrada do usuário
+        System.out.println("Qual letra a palavra possui?");
+        do{            
+            System.out.print("> Digite seu chute: ");
+            letra = sc.nextLine().charAt(0);
+
+            if(letra < 65 || (letra > 90 && letra < 97) || letra > 122){
+                System.out.println("Entrada inválida!");
+                System.out.println("Digite uma letra de A a Z.\n");
+            }
+            
+        }while(letra < 65 || (letra > 90 && letra < 97) || letra > 122);
+        
         return letra;
     }
 
     //Verficiando Acerto/Erro
-    public void mostrAlerta(boolean acertou) {
+    public void mostrarAlerta(boolean acertou) {
         if (acertou) {
             System.out.println(">Acertou<");
             System.out.println("*** ***");
