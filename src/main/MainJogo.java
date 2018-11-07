@@ -7,7 +7,8 @@ public class MainJogo
 {
     public static void main(String[] args) 
     {
-        System.out.println(Palavra.gerarPalavra());
+        String palavra = Palavra.gerarPalavra();
+        TelaJogo.mostrarPalavra(palavra);
         TelaJogo.pegarEntrada();        
     }
     

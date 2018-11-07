@@ -5,11 +5,16 @@ import core.Palavra;
 
 public class TelaJogo {
     
-    public static String mostrarPalavra(){
-        String palavra;
-        int tamanho;
+    public static void mostrarPalavra(String palavra){
+        int tamanho = palavra.length();
+        String lacunas = "";
         
-        return "palavra";
+        for(int i = 0; i < tamanho; i++)
+        {
+            lacunas += "__ ";
+        }
+        
+        System.out.println(lacunas);
     }
     
     public static char pegarEntrada() {
