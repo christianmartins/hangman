@@ -1,14 +1,29 @@
 package view;
 
 import java.util.Scanner;
+import core.Palavra;
 
 public class TelaJogo {
-
-    public static char pegandoEntrada() {
+    
+    public static String mostrarPalavra(){
+        String palavra;
+        int tamanho;
+        
+        return "palavra";
+    }
+    
+    public static char pegarEntrada() {
         Scanner sc = new Scanner(System.in);
-        System.out.println(">> Digite uma Letra: ");
-        char letra = sc.nextLine().charAt(0);
-        System.out.println(">> Pengando Entrada do Jogo <<");
+        char letra;
+        do{
+            System.out.println("Qual letra a palavra possui?");
+            System.out.println("Digite seu chute: ");
+            letra = sc.nextLine().charAt(0);
+            
+            if(letra >= 97 && letra <= 122) System.out.println("Entrada inválida!\n\n");
+        }while(letra >= 97 && letra <= 122);
+        
+        System.out.println(">> Pegando Entrada do Jogo <<");
         return letra;
     }
 
