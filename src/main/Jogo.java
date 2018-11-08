@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package core;
+package main;
 
-import view.TelaJogo;
+import components.Palavra;
+import components.Jogador;
+import graphics.TelaJogo;
 
 /**
  *
@@ -13,6 +15,13 @@ import view.TelaJogo;
  */
 public class Jogo {
     Jogador jogador;
+    
+    public static void main(String[] args){
+        String palavra = Palavra.gerarPalavra();
+        TelaJogo.mostrarPalavra(palavra);
+        TelaJogo.pegarEntrada();        
+    }
+       
     public Jogo(){
         jogador = new Jogador();
     }

@@ -1,7 +1,7 @@
-package view;
+package graphics;
 
 import java.util.Scanner;
-import core.Palavra;
+import components.Palavra;
 
 public class TelaJogo {
     
