@@ -2,7 +2,7 @@ package components;
 
 import java.util.Random;
 
-public class Palavra {
+public abstract class Palavra {
     private String[] armazem;
     
     public static String gerar(){
@@ -30,7 +30,7 @@ public class Palavra {
         String lacunas = "";
         
         for(int i = 0; i < tamanho; i++)
-        {
+        {            
             lacunas += "__ ";
         }
         

@@ -26,7 +26,7 @@ public class TelaJogo {
     }
     
     public static void mostrarLacunas() {
-        System.out.println(Palavra.verLacunas());
+        System.out.println("\n" + Palavra.verLacunas() + "\n");
     }
 
     //Verficiando Acerto/Erro
