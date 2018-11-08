@@ -5,18 +5,6 @@ import components.Palavra;
 
 public class TelaJogo {
     
-    public static void mostrarPalavra(String palavra){
-        int tamanho = palavra.length();
-        String lacunas = "";
-        
-        for(int i = 0; i < tamanho; i++)
-        {
-            lacunas += "__ ";
-        }
-        
-        System.out.println(lacunas);
-    }
-    
     public static char pegarEntrada() {
         Scanner sc = new Scanner(System.in);
         char letra;
@@ -35,6 +23,10 @@ public class TelaJogo {
         }while(letra < 65 || (letra > 90 && letra < 97) || letra > 122);
         
         return letra;
+    }
+    
+    public static void mostrarLacunas() {
+        System.out.println(Palavra.verLacunas());
     }
 
     //Verficiando Acerto/Erro
@@ -57,4 +49,5 @@ public class TelaJogo {
             System.out.println("+++ +++");
         }
     }
+    
 }

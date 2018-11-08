@@ -2,10 +2,6 @@ package components;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author vitor
- */
 public class Jogador {
 
     private int numeroJogadas;
