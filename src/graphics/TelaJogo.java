@@ -2,6 +2,7 @@ package graphics;
 
 import java.util.Scanner;
 import components.Palavra;
+import main.Jogo;
 
 public class TelaJogo {
     
@@ -9,18 +10,16 @@ public class TelaJogo {
         Scanner sc = new Scanner(System.in);
         char letra;
         
-        // Tratando a entrada do usuário
         System.out.println("Qual letra a palavra possui?");
-        do{            
+        do{
             System.out.print("> Digite seu chute: ");
-            letra = sc.nextLine().charAt(0);
-
-            if(letra < 65 || (letra > 90 && letra < 97) || letra > 122){
-                System.out.println("Entrada inválida!");
-                System.out.println("Digite uma letra de A a Z.\n");
-            }
+            letra = sc.next().charAt(0);
             
-        }while(letra < 65 || (letra > 90 && letra < 97) || letra > 122);
+            if(!Jogo.tratarEntrada(letra)){
+                System.out.println("Entrada inválida!");
+                System.out.println("Digite apenas uma letra de A - Z.");
+            }
+        }while(!Jogo.tratarEntrada(letra));
         
         return letra;
     }

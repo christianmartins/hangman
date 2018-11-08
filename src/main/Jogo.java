@@ -12,10 +12,17 @@ public class Jogo {
     public static void main(String[] args) {
         String palavra = Palavra.gerar();
         TelaJogo.mostrarLacunas();
-        TelaJogo.pegarEntrada();
+        char entrada = TelaJogo.pegarEntrada();
     }
     
-    public boolean tratarEntrada(char entrada) {
+    public static boolean tratarEntrada(char letra) {       
+        do{            
+            if(letra < 65 || (letra > 90 && letra < 97) || letra > 122){
+                return false;
+            }
+            
+        }while(letra < 65 || (letra > 90 && letra < 97) || letra > 122);
+        
         return true;
     }
     
